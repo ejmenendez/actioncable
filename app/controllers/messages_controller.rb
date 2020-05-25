@@ -28,6 +28,8 @@ class MessagesController < ApplicationController
     @message.user = current_user
     @message.save
 
+    variable = 'esto es para el push'
+    # esto pone en una cola el mensaje para enviar
     SendMessageJob.perform_later(@message)
   end
 
