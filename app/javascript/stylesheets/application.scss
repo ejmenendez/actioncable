@@ -1,0 +1,49 @@
+.chat-room {
+    width: 600px;
+    height: 100vh;
+    overflow-y: scroll;
+    .messages {
+      min-height: 59px;
+      display: inline-block;
+      .content-container {
+          .message {
+            .content {
+              background-color: #eeeeee;
+              padding: 8px 16px;
+              border-radius: 20px;
+            }
+
+            .author{
+              font-size: 8px;
+              color: #777777;
+              margin-left: 10px;
+            }
+
+            &.me {
+              .content-container {
+                  float: right;
+                  background-color: #007bff;
+                  color: white;
+              }
+            }
+
+      }
+    }
+
+    .chat-box {
+      position: absolute;
+      bottom: 0;
+      padding: 20px;
+      width: 550px;
+      input[type=text]{
+        height: 45px;
+        font-size: 14px;
+        padding: 8px;
+      }
+
+      .btn{
+        height: 45px;
+      }
+    }
+  }
+}

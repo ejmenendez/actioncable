@@ -1,0 +1,12 @@
+<%= form_for(message, remote: true) do |form| %>
+
+  <%= form.hidden_field :room_id, value: room.id %>
+
+  <div class="input-group">
+    <%= form.text_field :content, placeholder: "Ingrese su mensaje aquí...", class: 'form-control', id: 'message-content' %>
+
+    <div class="input-group-append" >
+      <%= form.submit "Enviar Mensaje", class: "btn btn-primary", id: "chat-btn" %>
+    </div>
+  </div>
+<% end %>
